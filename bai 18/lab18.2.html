@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const myCountry = {
+        country: "Finland",
+        capital: "Helsinki",
+        population: 6,
+        neighbours: "3 neighbouring countries",
+      };
+      myCountry.population = 8;
+      myCountry["population"] = 4;
+      console.log(
+        `${myCountry.country} has ${myCountry.population} million finnish-speaking people, ${myCountry.neighbours} and a capital called ${myCountry.capital}.`
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const listOfNeighbours = [
+        ["Canada", "Mexico"],
+        ["Spain"],
+        ["Norway", "Sweden", "Russia"],
+      ];
+      for (let i = 0; i < listOfNeighbours.length; i++) {
+        console.log(listOfNeighbours[i]);
+
+        //Kiểm tra xem mảng con có ít nhất hai phần tử không
+        if (listOfNeighbours[i].length >= 2) {
+          //Print elements from the second element onward
+          for (let j = 1; j < listOfNeighbours[i].length; j++) {
+            console.log(listOfNeighbours[i][j]);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

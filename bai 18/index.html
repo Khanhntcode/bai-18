@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const jonas = {
+        firstName: "Jonas",
+        lastNam: "Schmedtmann",
+        birthYear: 1995,
+        job: "teacher",
+        friends: ["Michael", "Peter", "Steven"],
+        hasDriverLicense: true,
+        calcAge: function () {
+          this.age = 2023 - this.birthYear;
+          return this.age;
+        },
+      };
+
+      jonas.sleep = function () {
+        console.log("Jonas is sleeping");
+      };
+
+      jonas.sleep();
+
+      // vongf lawpj
+
+      for (let rep = 1; rep <= 30; rep++) {
+        console.log(`Lifting weights repetition ${rep}`);
+      }
+
+      const friends = ["A", "B", "C", "D", "E"];
+      for (let i = 0; i < friends.length; i++) {
+        console.log(i);
+        console.log(`my friends : ${friends[i]}`);
+      }
+
+      // ssố chẵn từ 1 -100 và có bao nhiêu số chẵn
+      const n = 100;
+      let sum = 0;
+
+      for (let i = 1; i <= 100; i++) {
+        if (i % 2 === 0) {
+          sum++;
+        }
+      }
+      console.log(sum);
+
+      //   const n = 100;
+      //   let sum = 0;
+
+      //   for (let i = 1; i <= n; i++) {
+      //     if (i % 2 === 0) {
+      //       sum += i; // Add the even number to the sum, not 1
+      //     }
+      //   }
+
+      //   console.log(sum); // Output the total sum of even numbers
+
+      // Tạo vòng lặp trong vòng lặp
+
+      for (let exercise = 1; exercise < 4; exercise++) {
+        console.log(`-------Starting exercise: ${exercise}`);
+        for (let rep = 1; rep < 6; rep++) {
+          console.log(
+            `Exercise ${exercise}: Lifting weight repetition: ${rep}`
+          );
+        }
+      }
+
+      // vong lap nguoc
+      const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      for (let i = array.length - 1; i >= 0; i--) {
+        console.log(array[i]);
+      }
+
+      // vong lap while
+      let rep = 1;
+      while (rep <= 10) {
+        console.log(`while: lifting weiht reprtition ${rep}`);
+        rep++;
+      }
+
+      // let sum = 0;
+      // for (let i = 2; i <= 6; i++) {
+      //   sum = sum + i;
+      // }
+      // console.log(sum);
+    </script>
+  </body>
+</html>

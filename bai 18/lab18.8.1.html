@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Với mỗi người (Mark Miller và John Smith), hãy tạo một object có các thuộc tính như full name, mass, and height
+      const markMiller = {
+        fullName: "Mark Miller",
+        mass: 78,
+        height: 1.69,
+        calcBMI: function () {
+          this.bmi = this.mass / (this.height * this.height);
+          return this.bmi;
+        },
+      };
+      console.log(markMiller);
+
+      const johnSmith = {
+        fullName: "John Smith",
+        mass: 92,
+        height: 1.95,
+        calcBMI: function () {
+          this.bmi = this.mass / (this.height * this.height);
+          return this.bmi;
+        },
+      };
+
+      //Tính chỉ số BMI cho cả Mark và John
+      console.log(markMiller.calcBMI().toFixed(1));
+      console.log(johnSmith.calcBMI().toFixed(1));
+
+      console.log(markMiller.bmi.toFixed(1));
+      console.log(johnSmith.bmi.toFixed(1));
+
+      //So sánh chỉ số BMI và ghi lại kết quả
+      if (markMiller.bmi > johnSmith.bmi) {
+        console.log(
+          `${markMiller.fullName} BMI (${markMiller.bmi.toFixed(1)})
+           is higher than ${johnSmith.fullName} (${johnSmith.bmi.toFixed(1)})!`
+        );
+      } else if (johnSmith.bmi > markMiller.bmi) {
+        console.log(
+          `${johnSmith.fullName} BMI (${johnSmith.bmi.toFixed(
+            1
+          )}) is higher than ${markMiller.fullName} (${markMiller.bmi.toFixed(
+            1
+          )})!`
+        );
+      } else {
+        console.log(
+          `${markMiller.fullName} and  ${johnSmith.fullName} have the same BMI`
+        );
+      }
+
+      //Lab 15.6.2. So sánh chỉ số BMI (phần 2)
+
+      //   const description = `Mark's BMI (${BMIMark1}) is higher than John's (${BMIJohn1})!`;
+      //   console.log(description);
+    </script>
+  </body>
+</html>

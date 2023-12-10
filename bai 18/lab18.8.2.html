@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Viết hàm 'calcTip' nhận giá trị hóa đơn bất kỳ làm đầu vào và trả về tiền tip
+      function calcTip(bill) {
+        return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+      }
+
+      // Kiểm tra hàm với giá trị hóa đơn là 100
+      //   const bill = 100;
+      //   const tip = calcTip(bill);
+      //   console.log(tip);
+
+      // Tạo array 'bills' chứa tất cả 10 giá trị hóa đơn kiểm tra.
+      const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+      //Tạo các array rỗng cho 'tips' va tính các giá trị tips.
+      const tips = [];
+
+      for (let i = 0; i < bills.length; i++) {
+        console.log(i);
+        const tip = calcTip(bills[i]);
+        tips.push(tip);
+      }
+
+      //Gọi tips ứng với các bills
+      console.log(tips);
+
+      //Tạo các array rỗng cho 'totals' va tính các giá trị totals.
+
+      const totals = [];
+
+      for (let i = 0; i < bills.length; i++) {
+        console.log(i);
+        const total = bills[i] + tips[i];
+        totals.push(total);
+      }
+
+      //Gọi tất cả các bills, típ, totals ứng với 10 giá trị bills
+      console.log("Bills:", bills);
+      console.log("Tips:", tips);
+      console.log("Totals:", totals);
+    </script>
+  </body>
+</html>

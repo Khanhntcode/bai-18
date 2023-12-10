@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Array
+      function percentageOfWorld1(population) {
+        return (population / 7900) * 100;
+      }
+
+      const populations = [1441, 337, 67, 6];
+      console.log(populations);
+
+      const percentages2 = [];
+
+      for (let i = 0; i < populations.length; i++) {
+        console.log(i);
+        const percentage = percentageOfWorld1(populations[i]);
+        percentages2.push(percentage);
+      }
+      console.log(percentages2);
+
+      //so sánh cới giá trị percentages đã làm thủ công ở bài 17.5
+      //xem có bị sai khác gì hay không
+
+      const percentages = populations.map(percentageOfWorld1);
+      console.log(percentages);
+    </script>
+  </body>
+</html>
